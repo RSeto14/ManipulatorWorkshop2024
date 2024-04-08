@@ -1,1 +1,0 @@
-"# ManipulatorWorkshop2024" 
