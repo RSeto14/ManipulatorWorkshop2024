@@ -78,9 +78,9 @@ $ J = \begin{bmatrix}
 
 ~~~
 def Jacobian(theta):
-    th1 = theta[0]
-    th2 = theta[1]
-    th3 = theta[2]
+    th1 = theta[0] # 1つ目の関節の角度 [rad]
+    th2 = theta[1] # 2つ目の関節の角度 [rad]
+    th3 = theta[2] # 3つ目の関節の角度 [rad]
     L1 = 0.425
     L2 = 0.392
     L3 = 0.1
