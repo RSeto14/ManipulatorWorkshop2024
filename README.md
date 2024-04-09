@@ -24,8 +24,8 @@ h  = 0.163
 
 ### 手先の位置と姿勢
 
-<img src="./img/fig2.png" width="40%">
-<img src="./img/fig1.png" width="40%">
+<img src="./img/fig2.png" width="40%"><img src="./img/fig1.png" width="40%">
+
 
 ## Quiz1 順運動学を解こう!
 
