@@ -50,4 +50,5 @@ python Control.py
 ~~~
 
 ↓の画面が表示されたら完了
+
 <img src="./img/test.png" width="60%">
