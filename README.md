@@ -161,9 +161,11 @@ def Control(t, theta, d_theta):
     Kd = 0
     ######################
     
-    target_pos, target_phi = Target(t)
-    pos,phi = ForwardKinematics(theta)
-    J = Jacobian(theta)
+    
+    pos,phi = ForwardKinematics(theta) #Quiz1 で作成した関数
+    J = Jacobian(theta)                #Quiz2 で作成した関数
+    target_pos, target_phi = Target(t) #Quiz3 で作成した関数
+    
     diff_pos = target_pos - pos
     diff_phi = target_phi - phi
     
