@@ -68,11 +68,12 @@ python ForwardKinematics.py
 
 ## Quiz2 ヤコビ行列を求めよう!
 
-$ J = \begin{bmatrix}
+<img src="./img/J.png" width="80%">
+<!-- $ J = \begin{bmatrix}
   \partial x/\partial \theta_{1} & \partial x/\partial \theta_{2} & \partial x/\partial \theta_{3} \\
   \partial z/\partial \theta_{1} & \partial z/\partial \theta_{2} & \partial z/\partial \theta_{3} \\
   \partial \phi/\partial \theta_{1} & \partial \phi/\partial \theta_{2} & \partial \phi/\partial \theta_{3} \\
-  \end{bmatrix}$
+  \end{bmatrix}$ -->
 
 <a href="./Quiz/Jacobian.py">Jacobian.py</a> ↓の部分を考える
 
