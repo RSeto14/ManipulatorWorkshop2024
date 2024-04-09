@@ -1,5 +1,4 @@
 import numpy as np
-from hidden.plot import plot_arrow_to_rgba
 
 def Target(t):
     
@@ -18,7 +17,14 @@ def Target(t):
     return np.array([x, 0.134, z]), phi
 
 
+
+
+
+
+
+
 if __name__ == "__main__":
+    from hidden.plot import plot_arrow_to_rgba
     from PIL import Image
     import os
     

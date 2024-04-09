@@ -27,6 +27,13 @@ def Jacobian(theta):
 
 
 
+
+
+
+
+
+
+
 if __name__ == "__main__":
     # import matplotlib.pyplot as plt
     from ForwardKinematics import ForwardKinematics

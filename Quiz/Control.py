@@ -1,13 +1,8 @@
-import time
 import numpy as np
-import mujoco
-import mujoco.viewer
 
-import os
-
-from ForwardKinematics import ForwardKinematics
-from Jacobian import Jacobian
-from Trajectory import Target
+from ForwardKinematics import ForwardKinematics #Quiz1 で作成した関数
+from Jacobian import Jacobian #Quiz2 で作成した関数
+from Trajectory import Target #Quiz3 で作成した関数
 
 def Control(t, theta, d_theta):
     # ゲインを調整#########
@@ -16,9 +11,9 @@ def Control(t, theta, d_theta):
     ######################
     
     
-    pos,phi = ForwardKinematics(theta) #Quiz1 で作成した関数
-    J = Jacobian(theta)                #Quiz2 で作成した関数
-    target_pos, target_phi = Target(t) #Quiz3 で作成した関数
+    pos,phi = ForwardKinematics(theta)
+    J = Jacobian(theta)
+    target_pos, target_phi = Target(t)
     
     diff_pos = target_pos - pos
     diff_phi = target_phi - phi
@@ -29,7 +24,15 @@ def Control(t, theta, d_theta):
     return torque, target_pos, target_phi
 
 
+
+
+
+
 if __name__ == "__main__":
+    import mujoco
+    import mujoco.viewer
+    import os
+    import time
     
     script_dir = os.path.dirname(os.path.abspath(__file__))
     model = mujoco.MjModel.from_xml_path(f"{script_dir}/universal_robots_ur5e/scene.xml")
