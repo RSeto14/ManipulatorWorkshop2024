@@ -38,3 +38,16 @@ env\Scripts\activate
 pip install mujoco
 pip install matplotlib
 ~~~
+
+##  動作確認 
+
+Quiz ディレクトリをそのまま自分の環境にコピー
+
+Control.py を実行
+~~~
+cd ~/Quiz
+python Control.py
+~~~
+
+↓の画面が表示されたら完了
+<img src="./img/test.png" width="60%">
