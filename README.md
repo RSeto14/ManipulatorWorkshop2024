@@ -47,9 +47,11 @@ python ForwardKinematics.py
 ~~~
 
 ↓みたいにすべての矢印が緑になればOK
+
 <img src="./img/OK_1.png" width="80%">
 
 ↓失敗例
+
 <img src="./img/NG_1.png" width="80%">
 
 ## Quiz2 ヤコビ行列を求めよう!
