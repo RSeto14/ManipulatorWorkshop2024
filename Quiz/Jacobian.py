@@ -32,7 +32,7 @@ def Jacobian(theta):
 
 
 
-
+# 以下は描画用のコード
 
 if __name__ == "__main__":
     # import matplotlib.pyplot as plt

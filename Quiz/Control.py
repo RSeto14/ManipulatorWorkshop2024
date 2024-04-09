@@ -28,6 +28,10 @@ def Control(t, theta, d_theta):
 
 
 
+
+
+# 以下は描画用のコード
+
 if __name__ == "__main__":
     import mujoco
     import mujoco.viewer

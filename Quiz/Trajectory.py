@@ -23,6 +23,8 @@ def Target(t):
 
 
 
+# 以下は描画用のコード
+
 if __name__ == "__main__":
     from hidden.plot import plot_arrow_to_rgba
     from PIL import Image

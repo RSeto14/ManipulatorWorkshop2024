@@ -1,6 +1,4 @@
-# Quiz1 順運動学を解こう!
 import numpy as np
-
 
 def ForwardKinematics(theta):
     th1 = theta[0] # 1つ目の関節の角度 [rad]
@@ -24,7 +22,7 @@ def ForwardKinematics(theta):
 
 
 
-
+# 以下は描画用のコード
 
 if __name__ == "__main__":
     import matplotlib.pyplot as plt
