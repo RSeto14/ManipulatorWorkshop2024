@@ -13,7 +13,7 @@
 
 ## 概要
 
-<img src="./img/overview.png" width="60%">
+<img src="./img/overview.png" width="70%">
 
 ### ロボットの仕様
 #### 寸法
