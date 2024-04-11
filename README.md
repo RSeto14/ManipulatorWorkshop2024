@@ -38,7 +38,7 @@ h  = 0.163
 
 関節角度から手先の位置と姿勢を求める
 
-~~~
+~~~python
 def ForwardKinematics(theta):
     th1 = theta[0] # 1つ目の関節の角度 [rad]
     th2 = theta[1] # 2つ目の関節の角度 [rad]
@@ -49,9 +49,9 @@ def ForwardKinematics(theta):
     h = 0.163
 
     # この部分を考える #######################
-    x = "手先のx座標の値"
-    z = "手先のz座標の値"
-    phi = "手先の姿勢の値"
+    x = 0   # 手先のx座標の値
+    z = 0   # 手先のz座標の値
+    phi = 0 # 手先の姿勢の値
     #########################################
 
     return np.array([x, 0.134, z]), phi
@@ -82,7 +82,7 @@ python ForwardKinematics.py
 
 <a href="./Quiz/Jacobian.py">Jacobian.py</a> ↓の部分を考える
 
-~~~
+~~~python
 def Jacobian(theta):
     th1 = theta[0] # 1つ目の関節の角度 [rad]
     th2 = theta[1] # 2つ目の関節の角度 [rad]
@@ -131,7 +131,8 @@ Quiz/gifにJacobian_check.gifが保存される
 <a href="./Quiz/Trajectory.py">Trajectory.py</a> ↓の部分を考える
 
 x,z,phi(任意)を時刻 t[s] の関数で表す。
-~~~
+
+~~~python
 def Target(t):
     
     # 初期位置・姿勢
@@ -166,7 +167,7 @@ Quiz/gifにTrajectory_check.gifが保存される
 
 ゲインを調整していい感じに動かそう！
 
-~~~
+~~~python
 def Control(t, theta, d_theta):
     # ゲインを調整#########
     Kp = 0
