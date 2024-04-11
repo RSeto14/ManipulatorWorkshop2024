@@ -45,9 +45,7 @@ if __name__ == "__main__":
     with mujoco.viewer.launch_passive(model, data) as viewer:
     # Close the viewer automatically after 30 wall-seconds.
         
-        data.joint("shoulder_lift_joint").qpos = np.pi/3
-        data.joint("elbow_joint").qpos = -np.pi/6
-        data.joint("wrist_1_joint").qpos = -np.pi/6
+        data.qpos[:] = np.array([np.pi/3, -np.pi/6, -np.pi/6])
         
         
         mujoco.mj_step(model, data)
@@ -63,15 +61,15 @@ if __name__ == "__main__":
             
             
             
-            theta = np.array([data.joint("shoulder_lift_joint").qpos[0], data.joint("elbow_joint").qpos[0], data.joint("wrist_1_joint").qpos[0]])
-            d_theta = np.array([data.joint("shoulder_lift_joint").qvel[0], data.joint("elbow_joint").qvel[0], data.joint("wrist_1_joint").qvel[0]])
-            
+            theta = data.qpos.copy()
+            d_theta = data.qvel.copy()
             
             
             torque, target_pos, target_phi = Control(t, theta, d_theta)
             
-            data.joint("target_joint").qpos[0:3] = target_pos
-            data.joint("target_joint").qpos[3:7] = np.array([np.cos(-target_phi/2),0,np.sin(-target_phi/2),0])
+            model.body("target_body").pos[:] = target_pos
+            model.body("target_body").quat[0] = np.cos(-target_phi/2)
+            model.body("target_body").quat[2] = np.sin(-target_phi/2)
             
             data.ctrl[:] = torque
             
