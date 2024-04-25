@@ -69,9 +69,6 @@ def plot_arrow_to_rgba(x, z, phi, t):
     
     return rgba
 
-
-    
-    
     
 if __name__ == "__main__":
     
